@@ -3,6 +3,7 @@ from flask_restful import Api, Resource
 from flask_cors import CORS
 from pymongo import MongoClient
 from datetime import date
+import os
 
 import bcrypt
 import spacy
@@ -11,7 +12,12 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-client = MongoClient("localhost:27017")
+db_name = os.environ['DB_NAME']
+db_username = os.environ['DB_USERNAME']
+db_password = os.environ['DB_PASSWORD']
+
+
+client = MongoClient(f"mongodb+srv://{db_username}:{db_password}@herokudb-ahmdx.mongodb.net/{db_name}?retryWrites=true&w=majority")
 db = client.similaritiesDB
 users = db['Users']
 
