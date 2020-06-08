@@ -12,12 +12,10 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-db_name = os.environ['DB_NAME']
-db_username = os.environ['DB_USERNAME']
-db_password = os.environ['DB_PASSWORD']
 
 
-client = MongoClient(f"mongodb+srv://{db_username}:{db_password}@herokudb-ahmdx.mongodb.net/{db_name}?retryWrites=true&w=majority")
+
+client = MongoClient(os.environ['MONGO_URI'])
 db = client.similaritiesDB
 users = db['Users']
 
