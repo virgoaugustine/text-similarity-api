@@ -232,4 +232,4 @@ api.add_resource(UpdateTokens, '/tokenCount')
 api.add_resource(Refill, '/refill')
 ################## End of Add API Resources ##################################
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', debug=True)
+    app.run(threaded=True, debug=True)
