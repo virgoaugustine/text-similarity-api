@@ -13,7 +13,6 @@ CORS(app)
 api = Api(app)
 
 
-sou
 
 client = MongoClient("colocalhost:27017")
 db = client.similaritiesDB
@@ -99,7 +98,7 @@ class Login(Resource):
         username = data['username']
         password = data['password']
     
-        if not checkUserExists(username) or not verifyPassword(username, password):
+        if not verifyPassword(username, password):
 
             retJson = {
                 'Message': 'Username or password is incorrect',
