@@ -98,22 +98,23 @@ class Login(Resource):
         username = data['username']
         password = data['password']
     
-        if not verifyPassword(username, password):
-
+        if verifyPassword(username, password):
             retJson = {
-                'Message': 'Username or password is incorrect',
+                'Message': 'Login successful',
+                'payload': {
+                    'name': fetchName(username),
+                    'username': username,
+                    'tokens':countTokens(username)
+                }
             }
-            return (retJson,401)
+            return (retJson, 200)
 
         retJson = {
-            'Message': 'Login successful',
-            'payload': {
-                'name': fetchName(username),
-                'username': username,
-                'tokens':countTokens(username)
-            }
+            'Message': 'Sorry, could not login',
         }
-        return (retJson, 200)
+        return (retJson,401)
+
+        
 
 class Detect(Resource):
     def post(self):
@@ -231,4 +232,4 @@ api.add_resource(UpdateTokens, '/tokenCount')
 api.add_resource(Refill, '/refill')
 ################## End of Add API Resources ##################################
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, connect=False;)
