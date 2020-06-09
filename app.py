@@ -14,7 +14,7 @@ api = Api(app)
 
 
 
-client = MongoClient("colocalhost:27017")
+client = MongoClient(os.environ['MONGO_URI'])
 db = client.similaritiesDB
 users = db['Users']
 
