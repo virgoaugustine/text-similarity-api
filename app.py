@@ -22,13 +22,13 @@ users = db['Users']
 
 ############### FUNCTIONS ####################
 def checkUserExists(username):
-    if users.count_documents({'username': username}) == 1:
+    if users.countDocuments({'username': username}) == 1:
         return True #User exists
     else:
         return False #User not exists
 
 def checkEmailExists(email):
-    True if users.count_documents({'email':email}) == 1 else False
+    True if users.countDocuments({'email':email}) == 1 else False
         
 
 def verifyPassword(username, password):
