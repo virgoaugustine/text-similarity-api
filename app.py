@@ -232,4 +232,4 @@ api.add_resource(UpdateTokens, '/tokenCount')
 api.add_resource(Refill, '/refill')
 ################## End of Add API Resources ##################################
 if __name__ == '__main__':
-    app.run(debug=True, connect=False;)
+    app.run(debug=True, connect=False)
