@@ -13,9 +13,9 @@ CORS(app)
 api = Api(app)
 
 
+sou
 
-
-client = MongoClient(os.environ['MONGO_URI'])
+client = MongoClient("colocalhost:27017")
 db = client.similaritiesDB
 users = db['Users']
 
@@ -232,4 +232,4 @@ api.add_resource(UpdateTokens, '/tokenCount')
 api.add_resource(Refill, '/refill')
 ################## End of Add API Resources ##################################
 if __name__ == '__main__':
-    app.run(threaded=True, debug=True)
+    app.run(debug=True)
