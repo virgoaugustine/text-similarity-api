@@ -3,9 +3,9 @@ A RESTful API that returns how much similar two texts are using Natural Language
 Information is saved to a Mongo Database.
 
 ## See how the API works
-```
-[Frontend App](https://virgoaugustine.github.io/text-similarity-frontend)
-```
+
+https://virgoaugustine.github.io/text-similarity-frontend
+
 
 ## API
 
