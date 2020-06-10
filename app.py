@@ -14,7 +14,7 @@ api = Api(app)
 
 
 
-client = MongoClient("mongodb+srv://virgo:makemoney123@herokudb-ahmdx.mongodb.net/HerokuDB?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://virgo:makemoney123@herokudb-ahmdx.mongodb.net/HerokuDB?retryWrites=true&w=majority", connect=False)
 db = client.similaritiesDB
 users = db['Users']
 
@@ -232,4 +232,4 @@ api.add_resource(UpdateTokens, '/tokenCount')
 api.add_resource(Refill, '/refill')
 ################## End of Add API Resources ##################################
 if __name__ == '__main__':
-    app.run(debug=True, connect=False)
+    app.run(debug=True)
