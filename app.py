@@ -139,16 +139,13 @@ class Detect(Resource):
             return (retJson, 403)
 
         #convert sentences to nlp, calculate ratio and subtract a token for transaction
-        nlp = spacy.load("en_core_web_sm")
+        nlp = spacy.load("en_core_web_md")
         text1 = nlp(text1)
         text2 = nlp(text2)
         
         ratio = text1.similarity(text2)
 
-        # users.update(
-        #     {'username': username},
-        #     {"$set": {'tokens': num_tokens-1}}
-        # )
+     
 
         #Return ratio to user
         result = '{0:.2f}%'.format((ratio*100))
