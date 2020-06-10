@@ -14,7 +14,7 @@ api = Api(app)
 
 
 
-client = MongoClient("mongodb+srv://virgo:makemoney123@herokudb-ahmdx.mongodb.net/HerokuDB?retryWrites=true&w=majority", connect=False)
+client = MongoClient(os.environ['MONGO_URI'], connect=False)
 db = client.similaritiesDB
 users = db['Users']
 
