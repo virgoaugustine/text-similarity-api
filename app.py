@@ -22,7 +22,7 @@ users = db['Users']
 
 ############### FUNCTIONS ####################
 def checkUserExists(username):
-    if users.countDocuments({'username': username}) == 1:
+    if users.count_documents({'username': username}) == 1:
         return True #User exists
     else:
         return False #User not exists
