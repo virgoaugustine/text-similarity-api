@@ -139,7 +139,7 @@ class Detect(Resource):
             return (retJson, 403)
 
         #convert sentences to nlp, calculate ratio and subtract a token for transaction
-        nlp = spacy.load("en_core_web_md")
+        nlp = spacy.load("en_core_web_sm")
         text1 = nlp(text1)
         text2 = nlp(text2)
         
