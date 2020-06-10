@@ -4,7 +4,7 @@ Information is saved to a Mongo Database.
 
 ## See how the API works
 ```
-https://virgoaugustine.github.io/text-similarity-frontend/
+<https://virgoaugustine.github.io/text-similarity-frontend/>
 ```
 
 ## API
