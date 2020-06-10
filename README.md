@@ -2,19 +2,9 @@
 A RESTful API that returns how much similar two texts are using Natural Language Processing.
 Information is saved to a Mongo Database.
 
-## Installation & Run
-
-Install Docker
-
+## See how the API works
 ```
-#Download this Project
-https://github.com/virgoaugustine/text-similarity-api.git
-```
-
-```
-#Build & Run
-pip
-docker-compose up
+https://virgoaugustine.github.io/text-similarity-frontend/
 ```
 
 ## API
