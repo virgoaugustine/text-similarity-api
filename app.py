@@ -9,7 +9,7 @@ import bcrypt
 import spacy
 
 app = Flask(__name__)
-CORS(app, resources={r"https://virgoaugustine.github.io/text-similarity-frontend/*"{"origins": "*", "allow_headers": "*", "expose_headers": "*"}})
+CORS(app)
 api = Api(app)
 
 
