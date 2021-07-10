@@ -9,7 +9,7 @@ import bcrypt
 import spacy
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*", "allow_headers": "*", "expose_headers": "*"}})
 api = Api(app)
 
 
